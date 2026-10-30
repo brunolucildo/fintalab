@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" role="img" aria-labelledby="title desc">
-  <title id="title">Pixel pitch illustration</title>
-  <desc id="desc">Original top-down pixel-art football pitch with a highlighted ball path.</desc>
+  <title id="title">Ilustração pixelada de um campo de futebol</title>
+  <desc id="desc">Campo de futebol visto de cima, com uma trajetória de bola em destaque.</desc>
   <rect width="240" height="160" fill="#101713"/>
   <path fill="#0B3D2E" d="M16 16h208v128H16z"/>
-  <path fill="none" stroke="#42D66B" stroke-width="2" d="M32 28h176v104H32zM120 28v104m-1-52a21 21 0 1 0 2 0m-89 14h24v30H32m176-30h-24v30h24"/>
+  <path fill="none" stroke="#42D66B" stroke-width="2" d="M32 28h176v104H32zM120 28v104M120 59a21 21 0 1 0 0 42a21 21 0 1 0 0-42M32 65h24v30H32zM208 65h-24v30h24z"/>
   <path fill="none" stroke="#FFD447" stroke-width="3" stroke-dasharray="5 5" d="m60 108 31-23 27 7 28-37"/>
   <path fill="#FFD447" d="M142 49h10v10h-10zM54 102h12v12H54z"/>
   <path fill="#F4F7F2" d="M113 79h10v10h-10z"/>

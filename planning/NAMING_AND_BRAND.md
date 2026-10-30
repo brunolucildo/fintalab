@@ -5,7 +5,7 @@
 ## Candidate names
 
 | Name | Concept | Pronunciation and audience | Possible tagline | Personality and visual opportunity |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | **FintaLab** | “Finta” evokes a football feint; “Lab” suggests evidence and development. | FIN-ta-lab; familiar football language in Brazil and reasonably approachable internationally. | Turn every match into a next step. | Curious, competitive, precise; a pixel ball trajectory crossing a measurement grid. |
 | **CampoIQ** | The pitch (“campo”) plus informed decision-making. | KAM-po eye-cue; clear in Brazil, short syllables abroad. | See more in every match. | Insightful and grounded; a pitch outline with a measurement point. |
 | **ElevenFrame** | The eleven on the field and a frame-by-frame view of performance. | ih-LEH-vən-fraym; internationally oriented and suitable for organizations. | Every action has a picture. | Observant and exact; a pixel frame around an athlete silhouette. |
@@ -44,7 +44,7 @@ The supplied original SVGs are starting assets, not a final trademark-cleared id
 ### Logo usage guidelines
 
 - Preserve clear space at least equal to one grid-cell width around the mark; never crowd it with interface content.
-- Use the light lockup on dark green/dark canvas and the dark lockup on light surfaces. Avoid placing the green mark directly on busy imagery.
+- Use `fintalab-logo-dark.svg` (light lettering) on dark surfaces and `fintalab-logo-light.svg` (dark lettering) on light surfaces. Avoid placing the green mark directly on busy imagery.
 - Do not recolor the yellow/green trajectory independently, stretch the mark, add effects, or recreate the wordmark with pixel typography.
 - Use the icon-only mark for small application/favorite icons; use a wordmark at sizes where it remains legible.
 - Keep SVG edges crisp; do not blur or smooth pixel-art details. Provide accessible text when a logo conveys identity and empty alt text when it is purely decorative beside the same name.
@@ -54,7 +54,7 @@ The supplied original SVGs are starting assets, not a final trademark-cleared id
 Initial semantic palette:
 
 | Token | Value | Intended use |
-|---|---|---|
+| --- | --- | --- |
 | `brand.green` | `#168447` | Brand/action accent; use white text only where the measured contrast is sufficient. |
 | `brand.deep` | `#0B3D2E` | High-contrast action and headings on light surfaces. |
 | `brand.bright` | `#42D66B` | Positive data accent on dark surfaces; not body text on light surfaces. |

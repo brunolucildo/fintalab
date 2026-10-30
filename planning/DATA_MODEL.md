@@ -46,6 +46,7 @@ erDiagram
 - Enforce uniqueness/idempotency for submissions at a defined scope; preserve retry and failure history.
 - Use foreign keys, tenant-aware authorization, and indexes for subject/date, tenant/status, and report/evaluation lookups after workload review.
 - Store timestamps consistently; derive displayed age from date of birth. Avoid persisting duplicate display values.
+- Country references use an ISO 3166-1 alpha-2 code, separate from the UI language/locale. Resolve localized country names and decorative flags through one catalog rather than storing duplicated labels or emoji. In the static wireframe, player and organization country references are fictional, browser-session-only examples; this does not introduce a production schema or persistence.
 - Apply explicit retention, deletion, and export policies to reports, photos, and evaluation records.
 
 ## Unresolved model decisions

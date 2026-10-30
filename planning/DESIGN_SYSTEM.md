@@ -11,11 +11,13 @@ Professional sports analysis with original retro-football accents. Prioritize re
 ### Semantic color tokens
 
 | Token | Value | Role |
-|---|---|---|
+| --- | --- | --- |
 | `color.brand.primary` | `#168447` | Brand green; avoid normal-sized text on light surface (measured 4.40:1 on `#F5F7F2`). |
+| `color.brand.primary-hover` | `#167A42` | Accessible hover state for primary actions; white text measures 5.39:1. |
 | `color.brand.deep` | `#0B3D2E` | Dark green for accessible text/actions on light surfaces. |
 | `color.brand.bright` | `#42D66B` | Positive accent, especially on dark surfaces. |
 | `color.brand.highlight` | `#FFD447` | Yellow emphasis/focus accent. |
+| `color.brand.yellow-depth` | `#F0B928` | Deeper yellow for pixel-card shading only; do not use for small text. |
 | `color.surface.dark` | `#101713` | Dark canvas. |
 | `color.surface.dark-raised` | `#18231C` | Raised dark surface. |
 | `color.surface.light` | `#F5F7F2` | Light canvas. |
@@ -30,14 +32,22 @@ Initial contrast samples: on `#101713`, primary light text is 16.84:1, muted tex
 ### Type
 
 - **Interface/body:** readable sans-serif, 16px default, 1.5 line-height.
-- **Display:** bold sans-serif, 28–40px, tight but readable line-height.
+- **Display:** bold sans-serif, 28–40px, tight but readable line-height. Use fixed sizes and content breakpoints; do not scale type with viewport width or compress tracking.
 - **Statistics:** tabular/monospaced numerals; align values consistently.
 - **Pixel display:** short decorative headings only; never use for forms, long copy, or small labels.
 - Set a responsive scale with rem units; preserve browser zoom and text resizing.
 
 ### Spacing and shape
 
-Use a 4px base spacing step (`4, 8, 12, 16, 24, 32, 48, 64px`). Use modest radii for inputs/cards and square pixel-like corners only as an accent. Borders must distinguish interactive/control boundaries. Shadows are restrained; do not use them as the sole indicator of hierarchy.
+Use a 4px base spacing step (`4, 8, 12, 16, 24, 32, 48, 64px`). Keep card radii at 8px or less; use square pixel-like corners only as an accent. Borders must distinguish interactive/control boundaries. Shadows are restrained; do not use them as the sole indicator of hierarchy.
+
+### Form controls
+
+- Shared control height is 44px with a 7px radius; labels stay above controls and form-grid columns use `minmax(0, 1fr)` so long values cannot force a wider column.
+- Language and role-preview selectors reserve a width within the top-bar layout and truncate only the selected value; changing a locale or role must not resize neighboring controls.
+- Country pickers use a fixed-height trigger with flag, selected name, and chevron in one row. The searchable list is an absolutely positioned popover so opening it does not move form content.
+- Validation text follows its field and wraps; invalid state is also identified by text and `aria-invalid`, not color alone.
+- Multi-value position selection is intentionally taller than a single-line input and retains native keyboard and mobile picker behavior.
 
 ### Breakpoints
 
@@ -50,13 +60,16 @@ Use short, purposeful transitions and respect `prefers-reduced-motion`. Pixel ar
 ## Component specifications
 
 | Component | Purpose / variants | States and responsive/accessibility notes |
-|---|---|---|
+| --- | --- | --- |
 | Buttons | Primary, secondary, quiet, destructive; clear verbs. | Default, hover, focus-visible, disabled, busy. Native button semantics; visible focus and minimum 44px touch target. |
 | Inputs/selects | Labeled text, date, number, select, password. | Required/optional, hint, invalid, disabled. Persistent labels, field-level error association, autocomplete where appropriate. |
+| Country picker | Nationality or organization country, with separate meanings and values. | Search in Portuguese, English, or Spanish; localized alphabetical options; local ISO flag SVG inside the closed trigger and each option; clear/unspecified state; 44px trigger; keyboard-operable listbox popover that does not alter form dimensions. |
+| Position selector | Main, secondary, and match-position choices grouped by goalkeeper, defense, wing-backs, midfield, and attack. | Retain all 19 reference positions and exact Portuguese labels as values; native grouped options; secondary positions allow multiple selection; filters use the same reference values. |
+| Top-bar selectors | Interface language and role preview. | Reserve widths within each responsive layout; selected text may ellipsize without changing control dimensions; preserve 44px touch height and focus outline. |
 | Checkbox/radio | Explicit consent and mutually exclusive selection. | Checked, unchecked, disabled, error. Use native controls and clear labels. |
 | File upload | Player/organization image. | Empty, selected, rejected, uploading. Explain accepted formats/size; keyboard operable; never rely on extension alone in a future implementation. |
 | Avatar/logo | Identity representation. | Image, initials, unavailable. Provide meaningful alt text or mark decorative imagery appropriately. |
-| Player card | One evaluation snapshot; compact and detailed. | Pending/completed/failed; responsive to one-column layout; rating scale and evaluation date are explicit. |
+| Player card | Original pixel-shield treatment with portrait, overall rating, position, country, and six attributes. | Fictional data is labeled; pending/completed/failed; responsive one-column layout; rating scale and evaluation date are explicit. Do not copy proprietary game-card artwork or marks. |
 | Statistic/attribute | Attribute value and supporting evidence. | Present, unavailable, loading. Pair score with label and evidence; do not imply missing equals zero. |
 | Progress indicator | Processing only. | Indeterminate unless real progress exists; accessible status announcement and reduced motion. |
 | Navigation/tabs | Move between account areas or related details. | Current, hover, focus, collapsed mobile menu. Use landmarks, visible current state, keyboard support. |
@@ -67,7 +80,7 @@ Use short, purposeful transitions and respect `prefers-reduced-motion`. Pixel ar
 
 ## Accessibility and responsive requirements
 
-Target WCAG 2.2 AA for implemented interfaces: semantic landmarks and headings, keyboard operation, visible focus, sufficient contrast, labels/errors, text alternatives, reduced-motion support, reflow at narrow width and zoom, and accessible status updates. Have assistive-technology and contrast review before production. Pixel decoration is hidden from assistive technology unless meaningful, in which case provide equivalent text.
+Target WCAG 2.2 AA for implemented interfaces: semantic landmarks and headings, keyboard operation, visible focus, sufficient contrast, labels/errors, text alternatives, reduced-motion support, reflow at narrow width and zoom, and accessible status updates. Interactive targets should be at least 44px where layout permits. Have assistive-technology and contrast review before production. Pixel decoration is hidden from assistive technology unless meaningful, in which case provide equivalent text.
 
 ## Tailwind and shadcn/ui
 
