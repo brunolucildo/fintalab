@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 128" role="img" aria-labelledby="title desc">
+  <title id="title">FintaLab secondary stacked logo</title>
+  <desc id="desc">Original stacked lockup with pitch-grid mark and FintaLab wordmark.</desc>
+  <path fill="#0B3D2E" d="M78 4h64v64H78z"/>
+  <path fill="#168447" d="M86 12h48v48H86z"/>
+  <path fill="none" stroke="#F5F7F2" stroke-width="2" d="M96 13v46m28-46v46M87 27h46M87 45h46"/>
+  <path fill="#FFD447" d="M105 30h10v10h-10zM96 18h6v6h-6z"/>
+  <path fill="#42D66B" d="M119 48h8v8h-8z"/>
+  <text x="110" y="97" fill="#F4F7F2" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="middle" letter-spacing="-1">FintaLab</text>
+  <path fill="#FFD447" d="M88 107h44v4H88z"/>
+</svg>

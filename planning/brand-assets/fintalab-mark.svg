@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">FintaLab mark</title>
+  <desc id="desc">Original pixel-inspired pitch grid and ball trajectory mark.</desc>
+  <path fill="#0B3D2E" d="M8 8h48v48H8z"/>
+  <path fill="#168447" d="M14 14h36v36H14z"/>
+  <path fill="none" stroke="#F5F7F2" stroke-width="2" d="M21 15v34m22-34v34M15 25h34m-34 14h34"/>
+  <path fill="#FFD447" d="M30 28h8v8h-8zM23 20h5v5h-5z"/>
+  <path fill="#42D66B" d="M41 40h6v6h-6zM17 43h4v4h-4z"/>
+</svg>

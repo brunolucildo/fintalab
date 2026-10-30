@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 72" role="img" aria-labelledby="title desc">
+  <title id="title">FintaLab logo for dark surfaces</title>
+  <desc id="desc">FintaLab wordmark and original pixel pitch symbol for dark backgrounds.</desc>
+  <path fill="#0B3D2E" d="M4 4h64v64H4z"/>
+  <path fill="#168447" d="M12 12h48v48H12z"/>
+  <path fill="none" stroke="#F5F7F2" stroke-width="2" d="M22 13v46m28-46v46M13 27h46M13 45h46"/>
+  <path fill="#FFD447" d="M31 30h10v10H31zM22 18h6v6h-6z"/>
+  <path fill="#42D66B" d="M45 48h8v8h-8z"/>
+  <text x="82" y="46" fill="#F4F7F2" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700" letter-spacing="-1">FintaLab</text>
+  <path fill="#FFD447" d="M83 56h9v4h-9z"/>
+</svg>

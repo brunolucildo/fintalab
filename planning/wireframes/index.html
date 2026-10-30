@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101713">
+  <meta name="description" content="FintaLab static football performance analytics wireframe. All data is fictional.">
+  <title>FintaLab — visual wireframe</title>
+  <link rel="icon" href="../brand-assets/fintalab-favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#landing" data-screen="landing" aria-label="FintaLab home">
+        <img src="../brand-assets/fintalab-mark.svg" alt="" width="38" height="38">
+        <span>Finta<span class="brand-accent">Lab</span></span>
+      </a>
+      <p class="eyebrow sidebar-label">DEMO NAVIGATION</p>
+      <nav class="side-nav" aria-label="Wireframe screens">
+        <button class="nav-link" data-screen="landing" data-nav-role="shared">⌂ <span>Landing</span></button>
+        <button class="nav-link" data-screen="account" data-nav-role="shared">◈ <span>Account setup</span></button>
+        <button class="nav-link" data-screen="login" data-nav-role="shared">↗ <span>Sign in</span></button>
+        <button class="nav-link" data-screen="player-dashboard" data-nav-role="player">▦ <span>Player dashboard</span></button>
+        <button class="nav-link" data-screen="player-profile" data-nav-role="player">◎ <span>My profile</span></button>
+        <button class="nav-link" data-screen="org-dashboard" data-nav-role="organization" hidden>▤ <span>Org dashboard</span></button>
+        <button class="nav-link" data-screen="roster" data-nav-role="organization" hidden>♙ <span>Athlete roster</span></button>
+        <button class="nav-link" data-screen="athlete" data-nav-role="organization" hidden>◎ <span>Athlete profile</span></button>
+        <button class="nav-link" data-screen="report" data-nav-role="shared">＋ <span>Match report</span></button>
+        <button class="nav-link" data-screen="processing" data-nav-role="shared">◷ <span>Processing</span></button>
+        <button class="nav-link" data-screen="evaluation" data-nav-role="shared">▣ <span>Evaluation detail</span></button>
+        <button class="nav-link" data-screen="history" data-nav-role="shared">◷ <span>History</span></button>
+        <button class="nav-link" data-screen="settings" data-nav-role="organization" hidden>⚙ <span>Settings</span></button>
+        <button class="nav-link" data-screen="showcase" data-nav-role="shared">✳ <span>Design system</span></button>
+        <button class="nav-link" data-screen="states" data-nav-role="shared">◇ <span>States &amp; errors</span></button>
+      </nav>
+      <div class="sidebar-foot">
+        <span class="pixel-dot" aria-hidden="true"></span>
+        <span>Static concept · no live data</span>
+      </div>
+    </aside>
+
+    <div class="app">
+      <header class="topbar">
+        <button class="icon-button menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">☰</button>
+        <div class="breadcrumbs"><span>FintaLab</span><span aria-hidden="true">/</span><strong id="current-section">Landing</strong></div>
+        <div class="topbar-actions">
+          <label class="sr-only" for="role-preview">Preview account type</label>
+          <select id="role-preview" class="role-select">
+            <option value="player">Player view</option>
+            <option value="agency">Agency view</option>
+            <option value="club">Club view</option>
+          </select>
+          <span class="demo-badge"><span aria-hidden="true">●</span> DEMO DATA</span>
+        </div>
+      </header>
+
+      <main id="main-content" tabindex="-1">
+        <section class="screen active" id="screen-landing" data-title="Landing">
+          <div class="landing-hero">
+            <div class="hero-copy">
+              <span class="eyebrow">FOOTBALL PERFORMANCE, WITH CONTEXT</span>
+              <h1>Every match can<br>move you <span class="highlight">forward.</span></h1>
+              <p>Evidence-led performance feedback for players and the teams that support them. Built for development, not guesswork.</p>
+              <div class="button-row">
+                <button class="button primary" data-screen="account">Explore account setup <span aria-hidden="true">→</span></button>
+                <button class="button secondary" data-screen="player-dashboard">View product demo</button>
+              </div>
+              <p class="fine-print">Concept preview only. All people, clubs, and numbers shown are fictional.</p>
+            </div>
+            <div class="hero-art">
+              <img src="../brand-assets/fintalab-pitch.svg" alt="Decorative pixel-art pitch with a highlighted route">
+              <div class="hero-score"><span>PERFORMANCE SNAPSHOT</span><strong>Evidence first<span>.</span></strong><small>Every result belongs to a match.</small></div>
+            </div>
+          </div>
+          <div class="feature-row">
+            <article class="feature-card"><span class="feature-icon">01</span><h2>Make the match legible</h2><p>Bring report context and available evidence together in one clear view.</p></article>
+            <article class="feature-card"><span class="feature-icon">02</span><h2>Keep every evaluation</h2><p>Review a player's history without silently replacing earlier results.</p></article>
+            <article class="feature-card"><span class="feature-icon">03</span><h2>Give access a purpose</h2><p>Separate organization membership from an athlete relationship.</p></article>
+          </div>
+        </section>
+
+        <section class="screen" id="screen-account" data-title="Account type">
+          <div class="page-heading"><div><span class="eyebrow">GET STARTED</span><h1>Who are you here as?</h1><p>Choose a preview to see the relevant onboarding fields.</p></div></div>
+          <div class="account-grid">
+            <button class="account-card" data-screen="player-signup"><span class="account-mark">P</span><strong>Player</strong><span>Build your profile and follow your own evaluation history.</span><b>Continue as player →</b></button>
+            <button class="account-card" data-screen="agency-signup"><span class="account-mark">A</span><strong>Agency</strong><span>Preview roster management for a player agency.</span><b>Continue as agency →</b></button>
+            <button class="account-card" data-screen="club-signup"><span class="account-mark">C</span><strong>Club</strong><span>Preview a club workspace and its authorized roster.</span><b>Continue as club →</b></button>
+          </div>
+          <div class="inline-note"><strong>Privacy by design</strong><span>An organization account does not automatically grant access to every athlete.</span></div>
+          <p class="bottom-link">Already have an account? <button class="text-button" data-screen="login">Sign in</button></p>
+        </section>
+
+        <section class="screen" id="screen-login" data-title="Sign in">
+          <div class="auth-card">
+            <span class="eyebrow">WELCOME BACK</span><h1>Sign in</h1><p>Continue to your private performance workspace.</p>
+            <form class="demo-form">
+              <label>Email address<input type="email" placeholder="name@example.com" autocomplete="email"></label>
+              <label>Password<input type="password" placeholder="Enter your password" autocomplete="current-password"></label>
+              <div class="form-inline"><label class="check-label"><input type="checkbox"> Remember this device</label><button type="button" class="text-button" data-screen="recovery">Forgot password?</button></div>
+              <button class="button primary full-width" type="submit">Sign in <span aria-hidden="true">→</span></button>
+            </form>
+            <p class="bottom-link">New to FintaLab? <button class="text-button" data-screen="account">Create an account</button></p>
+          </div>
+        </section>
+
+        <section class="screen" id="screen-player-signup" data-title="Player registration">
+          <div class="page-heading"><div><span class="eyebrow">PLAYER ACCOUNT · DEMO FORM</span><h1>Create your player account</h1><p>Only the fields needed to begin are shown. Profile details can be completed later.</p></div></div>
+          <div class="form-card"><form class="demo-form form-grid">
+            <label class="span-two">Full name<input placeholder="e.g. Alex Silva"></label>
+            <label>Email address<input type="email" placeholder="name@example.com"></label>
+            <label>Date of birth <span class="optional">(optional)</span><input type="date"></label>
+            <label>Password<input type="password" placeholder="Create a password"></label>
+            <label>Nationality <span class="optional">(optional)</span><input placeholder="Select nationality"></label>
+            <label class="span-two check-label"><input type="checkbox"> I have read the privacy information.</label>
+            <div class="span-two button-row"><button type="button" class="button secondary" data-screen="account">Back</button><button class="button primary" type="button" data-screen="setup">Continue to profile setup →</button></div>
+          </form></div>
+        </section>
+
+        <section class="screen" id="screen-agency-signup" data-title="Agency registration">
+          <div class="page-heading"><div><span class="eyebrow">AGENCY ACCOUNT · DEMO FORM</span><h1>Set up your agency</h1><p>Organization details are distinct from individual user credentials.</p></div></div>
+          <div class="form-card"><form class="demo-form form-grid">
+            <label class="span-two">Agency name<input placeholder="Agency name"></label>
+            <label>Work email<input type="email" placeholder="contact@example.com"></label>
+            <label>Country<input placeholder="Country"></label>
+            <label>City <span class="optional">(optional)</span><input placeholder="City"></label>
+            <label>Website <span class="optional">(optional)</span><input type="url" placeholder="https://"></label>
+            <label class="span-two">Logo <span class="optional">(optional · simulated)</span><input type="file" accept="image/*"></label>
+            <div class="span-two button-row"><button type="button" class="button secondary" data-screen="account">Back</button><button class="button primary" type="submit">Continue →</button></div>
+          </form></div>
+        </section>
+
+        <section class="screen" id="screen-club-signup" data-title="Club registration">
+          <div class="page-heading"><div><span class="eyebrow">CLUB ACCOUNT · DEMO FORM</span><h1>Set up your club</h1><p>Organization details are distinct from individual user credentials.</p></div></div>
+          <div class="form-card"><form class="demo-form form-grid">
+            <label class="span-two">Club name<input placeholder="Club name"></label>
+            <label>Work email<input type="email" placeholder="contact@example.com"></label>
+            <label>Country<input placeholder="Country"></label>
+            <label>City <span class="optional">(optional)</span><input placeholder="City"></label>
+            <label>Website <span class="optional">(optional)</span><input type="url" placeholder="https://"></label>
+            <label class="span-two">Club logo <span class="optional">(optional · simulated)</span><input type="file" accept="image/*"></label>
+            <div class="span-two button-row"><button type="button" class="button secondary" data-screen="account">Back</button><button class="button primary" type="submit">Continue →</button></div>
+          </form></div>
+        </section>
+
+        <section class="screen" id="screen-recovery" data-title="Password recovery">
+          <div class="auth-card"><span class="eyebrow">ACCOUNT RECOVERY</span><h1>Reset your password</h1><p>Recovery and reset are shown as separate visual steps; no email is sent in this prototype.</p>
+            <form class="demo-form"><label>Email address<input type="email" placeholder="name@example.com"></label><button class="button primary full-width" type="submit">Show recovery confirmation</button></form>
+            <div class="inline-note"><strong>Next step</strong><span>A future product would send a time-limited reset link and verify it server-side.</span></div>
+            <button class="button secondary full-width" data-screen="password-reset">Preview password reset form</button>
+            <button class="text-button" data-screen="login">Back to sign in</button>
+          </div>
+        </section>
+
+        <section class="screen" id="screen-password-reset" data-title="Password reset">
+          <div class="auth-card"><span class="eyebrow">SECURE RESET · VISUAL ONLY</span><h1>Choose a new password</h1><p>This screen represents a verified reset-link flow. No token is checked here.</p>
+            <form class="demo-form"><label>New password<input type="password" placeholder="Enter a new password" autocomplete="new-password"></label><label>Confirm new password<input type="password" placeholder="Repeat the new password" autocomplete="new-password"></label><button class="button primary full-width" type="submit">Preview password update</button></form>
+            <div class="inline-note"><strong>Security note</strong><span>A production flow must validate a single-use, time-limited token on the server.</span></div>
+          </div>
+        </section>
+
+        <section class="screen" id="screen-setup" data-title="Profile setup">
+          <div class="page-heading"><div><span class="eyebrow">FIRST STEPS · OPTIONAL DETAILS</span><h1>Make the profile yours</h1><p>Displayed age should be derived from date of birth. You can skip optional fields.</p></div><span class="step-badge">STEP 2 OF 2</span></div>
+          <div class="form-card"><form class="demo-form form-grid">
+            <label>Primary position<select><option>Select position</option><option>Goalkeeper</option><option>Defender</option><option>Midfielder</option><option>Forward</option></select></label>
+            <label>Preferred foot<select><option>Select foot</option><option>Right</option><option>Left</option><option>Both</option></select></label>
+            <label>Secondary positions<input placeholder="Optional"></label><label>Current club<input placeholder="Optional"></label>
+            <label>Height (cm)<input type="number" placeholder="Optional"></label><label>Shirt number<input type="number" placeholder="Optional"></label>
+            <label class="span-two">Short biography<textarea rows="3" placeholder="Optional"></textarea></label>
+            <div class="span-two button-row"><button type="button" class="button secondary" data-screen="player-dashboard">Skip for now</button><button class="button primary" type="submit">Save preview profile</button></div>
+          </form></div>
+        </section>
+
+        <section class="screen" id="screen-player-dashboard" data-title="Player dashboard">
+          <div class="page-heading"><div><span class="eyebrow">PLAYER SPACE · FICTIONAL DATA</span><h1>Good morning, Alex.</h1><p>Your progress starts with a clear picture of the match.</p></div><button class="button primary" data-screen="report">＋ New match report</button></div>
+          <div class="dashboard-grid">
+            <article class="card latest-card"><div class="card-heading"><div><span class="eyebrow">LATEST EVALUATION · SAMPLE</span><h2>One match, one snapshot</h2></div><span class="status-chip complete">Completed</span></div><div class="mini-player-card"><div class="avatar pixel-avatar">AS</div><div><strong>Alex Silva</strong><span>Forward · 18 Oct 2026</span></div><div class="rating"><strong>78</strong><span>OVERALL*</span></div></div><button class="text-button" data-screen="evaluation">Open illustrative evaluation →</button><p class="fine-print">* Fictional sample score shown to demonstrate layout only.</p></article>
+            <article class="card profile-card"><div class="card-heading"><div><span class="eyebrow">PROFILE</span><h2>Player details</h2></div><span class="avatar small-avatar">AS</span></div><p>Forward <span class="dot-sep">·</span> Brazilian <span class="dot-sep">·</span> Fictional profile</p><div class="progress-label"><span>Profile completeness</span><strong>4 of 7</strong></div><div class="progress-track"><span style="width:58%"></span></div><button class="text-button" data-screen="player-profile">View profile →</button></article>
+          </div>
+          <div class="section-title"><div><span class="eyebrow">RECENT ACTIVITY</span><h2>Evaluation history</h2></div><button class="text-button" data-screen="history">View all →</button></div>
+          <div class="table-wrap"><table><thead><tr><th>Match</th><th>Date</th><th>Status</th><th>Result</th><th><span class="sr-only">Action</span></th></tr></thead><tbody><tr><td>Sample vs. Northside</td><td>18 Oct 2026</td><td><span class="status-chip complete">Completed</span></td><td>Illustrative</td><td><button class="text-button" data-screen="evaluation">View</button></td></tr><tr><td>Sample vs. Harbor FC</td><td>02 Oct 2026</td><td><span class="status-chip processing">Processing</span></td><td>—</td><td><button class="text-button" data-screen="processing">Status</button></td></tr></tbody></table></div>
+          <p class="fiction-label">All names, dates, status and values on this page are fictional examples.</p>
+        </section>
+
+        <section class="screen" id="screen-player-profile" data-title="My player profile">
+          <div class="page-heading"><div><span class="eyebrow">PLAYER PROFILE · FICTIONAL</span><h1>Alex Silva</h1><p>Your profile is separate from any organization membership or athlete relationship.</p></div><div class="button-row"><button class="button secondary" data-screen="player-dashboard">← Dashboard</button><button class="button primary" data-screen="report">＋ New match report</button></div></div>
+          <div class="profile-layout"><article class="card identity-card"><span class="avatar portrait">AS</span><h2>Alex Silva</h2><p>Fictional player profile</p><div class="detail-list"><div><span>Primary position</span><strong>Forward</strong></div><div><span>Nationality</span><strong>Brazilian</strong></div><div><span>Preferred foot</span><strong>Right</strong></div><div><span>Profile visibility</span><strong>Private (concept)</strong></div></div><button class="button secondary full-width" data-screen="setup">Edit profile (simulated)</button></article><div class="stack"><article class="card"><span class="eyebrow">PERSONAL HISTORY</span><h2>Your evaluations</h2><p>Each result is tied to a specific match report. Only compatible engine versions and score definitions should be compared.</p><button class="text-button" data-screen="history">Open evaluation history →</button></article><article class="card"><span class="eyebrow">ORGANIZATION LINKS</span><h2>Connected organizations</h2><p>No real organization is connected in this demo. A future link requires an authorized relationship, not just an organization invitation.</p><span class="status-chip pending">No connection in preview</span></article></div></div>
+        </section>
+
+        <section class="screen" id="screen-org-dashboard" data-title="Organization dashboard">
+          <div class="page-heading"><div><span class="eyebrow" id="org-kind">AGENCY WORKSPACE · FICTIONAL DATA</span><h1 id="org-greeting">Northstar Agency</h1><p>Monitor only athletes connected to this organization.</p></div><button class="button primary" data-screen="roster">Open roster →</button></div>
+          <div class="metric-grid"><article class="metric-card"><span>AUTHORIZED ROSTER</span><strong>24</strong><small>Fictional demo count</small></article><article class="metric-card"><span>RECENT EVALUATIONS</span><strong>08</strong><small>Illustrative period</small></article><article class="metric-card"><span>NEEDS ATTENTION</span><strong>02</strong><small>Demo processing states</small></article></div>
+          <div class="two-column"><article class="card"><div class="card-heading"><div><span class="eyebrow">ROSTER ACTIVITY</span><h2>Recently viewed athletes</h2></div><button class="text-button" data-screen="roster">See roster</button></div><div class="list-row"><span class="avatar">LM</span><div><strong>Lucas Moreira</strong><small>Midfielder · Fictional</small></div><span class="list-end">Sample</span></div><div class="list-row"><span class="avatar">BN</span><div><strong>Bruna Nunes</strong><small>Defender · Fictional</small></div><span class="list-end">Sample</span></div><div class="list-row"><span class="avatar">RC</span><div><strong>Rafael Costa</strong><small>Goalkeeper · Fictional</small></div><span class="list-end">Sample</span></div></article><article class="card"><span class="eyebrow">QUICK ACTIONS</span><h2>Keep the work moving</h2><div class="action-stack"><button class="button secondary" data-screen="athlete">＋ Add or request an athlete</button><button class="button secondary" data-screen="report">＋ Start an evaluation</button><button class="button secondary" data-screen="settings">⚙ Organization settings</button></div><p class="fine-print">An organization membership alone does not grant athlete access.</p></article></div>
+        </section>
+
+        <section class="screen" id="screen-roster" data-title="Athlete roster">
+          <div class="page-heading"><div><span class="eyebrow">ORGANIZATION · FICTIONAL ROSTER</span><h1>Athletes</h1><p>Search and filter the roster connected to this demo organization.</p></div><button class="button primary" data-screen="athlete">＋ Add athlete</button></div>
+          <div class="toolbar"><label class="search-field">⌕ <span class="sr-only">Search athletes</span><input id="athlete-search" type="search" placeholder="Search by name"></label><label class="sr-only" for="position-filter">Filter by position</label><select id="position-filter"><option value="">All positions</option><option>Forward</option><option>Midfielder</option><option>Defender</option><option>Goalkeeper</option></select><button class="button secondary" data-screen="states">View empty roster state</button></div>
+          <div class="table-wrap"><table id="roster-table"><thead><tr><th>Athlete</th><th>Position</th><th>Nationality</th><th>Relationship</th><th>Latest evaluation</th><th><span class="sr-only">Action</span></th></tr></thead><tbody>
+            <tr data-name="lucas moreira" data-position="Midfielder"><td><span class="table-person"><span class="avatar">LM</span><span><strong>Lucas Moreira</strong><small>Fictional profile</small></span></span></td><td>Midfielder</td><td>Brazil</td><td><span class="status-chip complete">Authorized</span></td><td>Illustrative</td><td><button class="text-button" data-screen="athlete">Open</button></td></tr>
+            <tr data-name="bruna nunes" data-position="Defender"><td><span class="table-person"><span class="avatar">BN</span><span><strong>Bruna Nunes</strong><small>Fictional profile</small></span></span></td><td>Defender</td><td>Brazil</td><td><span class="status-chip complete">Authorized</span></td><td>Not available</td><td><button class="text-button" data-screen="athlete">Open</button></td></tr>
+            <tr data-name="rafael costa" data-position="Goalkeeper"><td><span class="table-person"><span class="avatar">RC</span><span><strong>Rafael Costa</strong><small>Fictional profile</small></span></span></td><td>Goalkeeper</td><td>Portugal</td><td><span class="status-chip pending">Request pending</span></td><td>Not available</td><td><button class="text-button" data-screen="states">Details</button></td></tr>
+            <tr data-name="marina dias" data-position="Forward"><td><span class="table-person"><span class="avatar">MD</span><span><strong>Marina Dias</strong><small>Fictional profile</small></span></span></td><td>Forward</td><td>Brazil</td><td><span class="status-chip complete">Authorized</span></td><td>Illustrative</td><td><button class="text-button" data-screen="athlete">Open</button></td></tr>
+          </tbody></table></div>
+          <p class="empty-filter" id="roster-empty" hidden>No matching fictional athletes. Adjust your search or filters.</p>
+          <p class="fiction-label">Fictional sample roster · relationship and evaluation states are illustrative.</p>
+        </section>
+
+        <section class="screen" id="screen-athlete" data-title="Athlete profile">
+          <div class="page-heading"><div><span class="eyebrow">ATHLETE PROFILE · FICTIONAL</span><h1>Lucas Moreira</h1><p>Midfielder <span class="dot-sep">·</span> Brazilian <span class="dot-sep">·</span> Sample data</p></div><div class="button-row"><button class="button secondary" data-screen="roster">← Roster</button><button class="button primary" data-screen="report">＋ New evaluation</button></div></div>
+          <div class="profile-layout"><article class="card identity-card"><span class="avatar portrait">LM</span><h2>Lucas Moreira</h2><p>Fictional athlete profile</p><div class="detail-list"><div><span>Primary position</span><strong>Midfielder</strong></div><div><span>Preferred foot</span><strong>Right</strong></div><div><span>Current club</span><strong>Sample Club</strong></div><div><span>Relationship</span><strong class="green-text">Authorized for demo</strong></div></div><button class="button secondary full-width" data-screen="athlete-edit">Edit profile (simulated)</button></article>
+            <div class="stack"><article class="card"><div class="card-heading"><div><span class="eyebrow">LATEST SNAPSHOT</span><h2>Evaluation overview</h2></div><span class="status-chip complete">Illustrative</span></div><p>No real evaluation is connected to this prototype. The score card is a fictional example.</p><button class="text-button" data-screen="evaluation">Open sample result →</button></article><article class="card"><div class="card-heading"><div><span class="eyebrow">HISTORY</span><h2>Recent evaluations</h2></div><button class="text-button" data-screen="history">View all →</button></div><div class="list-row"><span class="date-block">18<br>OCT</span><div><strong>Sample match report</strong><small>Completed · fictional data</small></div><button class="text-button" data-screen="evaluation">Open</button></div><div class="list-row"><span class="date-block">02<br>OCT</span><div><strong>Sample match report</strong><small>Processing · fictional state</small></div><button class="text-button" data-screen="processing">Status</button></div></article></div>
+          </div>
+        </section>
+
+        <section class="screen" id="screen-athlete-edit" data-title="Add or edit athlete">
+          <div class="page-heading"><div><span class="eyebrow">ATHLETE MANAGEMENT · SIMULATED</span><h1>Add or edit an athlete</h1><p>Creating a profile and linking an existing athlete are different actions.</p></div></div>
+          <div class="notice warning"><strong>Relationship approval</strong><span>In a real product, an existing player must authorize the organization relationship; do not silently assign a profile.</span></div>
+          <div class="form-card"><div class="segmented" role="group" aria-label="Athlete form mode"><button class="segment active" data-mode="new">New profile</button><button class="segment" data-mode="request">Request relationship</button></div>
+            <form class="demo-form form-grid"><label>Full name<input placeholder="Athlete name"></label><label>Email or invitation address<input type="email" placeholder="Optional"></label><label>Primary position<select><option>Select position</option><option>Forward</option><option>Midfielder</option><option>Defender</option><option>Goalkeeper</option></select></label><label>Nationality<input placeholder="Optional"></label><label class="span-two">Profile image <span class="optional">(simulated upload)</span><input type="file" accept="image/*"></label><div class="span-two button-row"><button type="button" class="button secondary" data-screen="roster">Cancel</button><button class="button primary" type="submit">Save preview only</button></div></form>
+          </div>
+        </section>
+
+        <section class="screen" id="screen-report" data-title="New match report">
+          <div class="page-heading"><div><span class="eyebrow">NEW EVALUATION · FICTIONAL INPUT</span><h1>Tell us about the match</h1><p>The written performance report is central. Statistics are optional and should reflect what you know.</p></div><span class="step-badge">1 · MATCH DETAILS</span></div>
+          <div class="notice info"><strong>Demo only</strong><span>This form does not submit data or contact an AI service.</span></div>
+          <div class="form-card"><form class="demo-form form-grid">
+            <label>Athlete<select><option>Alex Silva (fictional)</option><option>Lucas Moreira (fictional)</option></select></label><label>Match date<input type="date" value="2026-10-18"></label>
+            <label>Opponent<input placeholder="Opponent name"></label><label>Competition <span class="optional">(optional)</span><input placeholder="Competition"></label>
+            <label>Position played <span class="optional">(optional)</span><input placeholder="Position"></label><label>Minutes played <span class="optional">(optional)</span><input type="number" placeholder="e.g. 75"></label>
+            <label>Goals <span class="optional">(optional)</span><input type="number" placeholder="—"></label><label>Assists <span class="optional">(optional)</span><input type="number" placeholder="—"></label>
+            <label class="span-two">Performance report <span class="required">Required in this concept</span><textarea rows="7" placeholder="Describe observable actions and match context. Do not include private information that is not needed."></textarea><small class="field-hint">Use only evidence available to you. Missing information is not a negative result.</small></label>
+            <label class="span-two check-label"><input type="checkbox"> I confirm I am authorized to submit this report.</label>
+            <div class="span-two button-row"><button type="button" class="button secondary" data-screen="athlete">Cancel</button><button class="button primary" type="submit">Preview submission →</button></div>
+          </form></div>
+        </section>
+
+        <section class="screen" id="screen-processing" data-title="Evaluation processing">
+          <div class="processing-card"><div class="processing-mark" aria-hidden="true"><span></span><span></span><span></span></div><span class="eyebrow">SAMPLE STATUS · NOT LIVE</span><h1>Evaluation in progress</h1><p>Your match report is represented as processing. This wireframe does not run an evaluation.</p><div class="status-steps"><div class="done"><span>✓</span><div><strong>Report received</strong><small>Fictional state</small></div></div><div class="current"><span>02</span><div><strong>Evaluation processing</strong><small>Simulated status</small></div></div><div><span>03</span><div><strong>Result available</strong><small>Only after a valid response</small></div></div></div><div class="button-row centered"><button class="button secondary" data-screen="history">Back to history</button><button class="button primary" data-screen="evaluation">View illustrative completed state</button></div><p class="fine-print">A real system must show an explicit failure if the engine fails; it must never invent a result.</p></div>
+        </section>
+
+        <section class="screen" id="screen-evaluation" data-title="Evaluation detail">
+          <div class="page-heading"><div><span class="eyebrow">COMPLETED EVALUATION · ALL SAMPLE VALUES FICTIONAL</span><h1>Performance snapshot</h1><p>Alex Silva <span class="dot-sep">·</span> Sample match, 18 Oct 2026</p></div><button class="button secondary" data-screen="history">← Evaluation history</button></div>
+          <div class="evaluation-layout">
+            <article class="player-card"><div class="card-topline"><span>FINTALAB <small>DEMO CARD</small></span><span class="card-date">18 OCT 2026</span></div><div class="card-player"><div class="portrait-art" aria-label="Decorative fictional player silhouette"><span>AS</span></div><div class="player-meta"><span class="position-label">FWD</span><strong>Alex<br>Silva</strong><span>🇧🇷 BRA · SAMPLE</span></div><div class="overall"><strong>78</strong><span>OVR*</span></div></div><div class="attribute-grid">
+              <div><strong>76</strong><span>PAC</span></div><div><strong>81</strong><span>SHO</span></div><div><strong>74</strong><span>PAS</span></div><div><strong>80</strong><span>DRI</span></div><div><strong>42</strong><span>DEF</span></div><div><strong>68</strong><span>PHY</span></div>
+            </div><div class="card-bottom"><span>ONE MATCH · ONE SNAPSHOT</span><span>FICTIONAL DATA</span></div></article>
+            <div class="stack">
+              <article class="card"><div class="card-heading"><div><span class="eyebrow">ABOUT THIS RESULT</span><h2>Evidence before rating</h2></div><span class="status-chip complete">Sample</span></div><p>These invented values exist only to demonstrate card layout. They are not engine output and must not inform real player decisions.</p><div class="notice warning"><strong>Not a real evaluation</strong><span>In production, show only scores and attributes returned and validated by the actual engine.</span></div></article>
+              <article class="card"><span class="eyebrow">ATTRIBUTE ANALYSIS · SAMPLE COPY</span><h2>Example evidence panel</h2><div class="attribute-row"><div><strong>Passing</strong><span>Sample explanation only</span></div><div class="bar"><span style="width:74%"></span></div><b>74</b></div><div class="attribute-row"><div><strong>Dribbling</strong><span>Sample explanation only</span></div><div class="bar"><span style="width:80%"></span></div><b>80</b></div><div class="attribute-row unavailable"><div><strong>Example unavailable attribute</strong><span>Not enough evidence is not a zero.</span></div><span class="dash">—</span></div></article>
+              <article class="card"><span class="eyebrow">DEVELOPMENT NOTES</span><h2>Recommendations</h2><p>Only display recommendations supported by the actual evaluation response. This sample paragraph is illustrative, not advice about a real athlete.</p><button class="text-button" data-screen="history">Compare compatible history →</button></article>
+            </div>
+          </div>
+          <p class="fiction-label">* All displayed ratings and example commentary are fictional. No score was generated.</p>
+        </section>
+
+        <section class="screen" id="screen-history" data-title="Evaluation history">
+          <div class="page-heading"><div><span class="eyebrow">PLAYER HISTORY · SAMPLE RECORDS</span><h1>Evaluation history</h1><p>Each row represents one match-specific evaluation; compatible scales are required for comparisons.</p></div><button class="button primary" data-screen="report">＋ New report</button></div>
+          <div class="toolbar"><label>Period<select><option>All dates</option><option>Last 90 days</option></select></label><label>Status<select><option>All statuses</option><option>Completed</option><option>Processing</option><option>Failed</option></select></label><button class="button secondary" data-screen="states">Preview no-history empty state</button></div>
+          <div class="history-list"><article class="history-row"><div class="date-block">18<br>OCT</div><div class="history-main"><strong>Sample match · vs. Northside</strong><span>Completed · Fictional sample</span></div><div class="history-result"><strong>78*</strong><span>Illustrative only</span></div><button class="button secondary" data-screen="evaluation">Open</button></article><article class="history-row"><div class="date-block">02<br>OCT</div><div class="history-main"><strong>Sample match · vs. Harbor FC</strong><span>Processing · Simulated</span></div><div class="history-result"><strong>—</strong><span>No result yet</span></div><button class="button secondary" data-screen="processing">Status</button></article><article class="history-row"><div class="date-block">21<br>SEP</div><div class="history-main"><strong>Sample match · vs. Central City</strong><span>Failed · Simulated error</span></div><div class="history-result"><strong>—</strong><span>No fabricated score</span></div><button class="button secondary" data-screen="states">Failure details</button></article></div>
+          <p class="fine-print">* Fictional display value only. Compare scores only when engine version, attribute definitions, and scales are compatible.</p>
+        </section>
+
+        <section class="screen" id="screen-settings" data-title="Organization settings">
+          <div class="page-heading"><div><span class="eyebrow">WORKSPACE SETTINGS · DEMO</span><h1>Organization profile</h1><p>Profile, membership, and athlete relationships are separate controls.</p></div></div>
+          <div class="settings-grid"><nav class="settings-tabs" aria-label="Settings sections"><button class="active">Organization profile</button><button>Members &amp; roles</button><button>Privacy &amp; access</button><button>Account settings</button></nav><div class="form-card"><form class="demo-form form-grid"><label class="span-two">Organization name<input value="Northstar Agency (fictional)"></label><label>Organization type<select><option>Agency</option><option>Club</option></select></label><label>Country<input value="Brazil (sample)"></label><label>City<input placeholder="Optional"></label><label>Website<input placeholder="Optional"></label><label class="span-two">Description<textarea rows="3" placeholder="Optional"></textarea></label><div class="span-two button-row"><button class="button secondary" type="button" data-screen="org-dashboard">Cancel</button><button class="button primary" type="submit">Save preview only</button></div></form></div></div>
+          <div class="notice info"><strong>Access boundary</strong><span>Membership controls organization actions. Athlete access requires a separately approved relationship.</span></div>
+        </section>
+
+        <section class="screen" id="screen-showcase" data-title="Design system showcase">
+          <div class="page-heading"><div><span class="eyebrow">FOUNDATIONS · VISUAL PREVIEW</span><h1>Design system showcase</h1><p>Semantic tokens, readable data, and restrained pixel-football details.</p></div></div>
+          <div class="showcase-grid">
+            <article class="card"><span class="eyebrow">BRAND COLORS</span><div class="swatches"><div style="--swatch:#168447">GREEN<br>#168447</div><div style="--swatch:#0B3D2E">DEEP<br>#0B3D2E</div><div style="--swatch:#42D66B">BRIGHT<br>#42D66B</div><div style="--swatch:#FFD447">YELLOW<br>#FFD447</div><div style="--swatch:#101713">CANVAS<br>#101713</div></div></article>
+            <article class="card"><span class="eyebrow">TYPE</span><h2>Performance, in context.</h2><p>Readable interface copy supports thoughtful decisions. <span class="mono">78 · 06 ATTRIBUTES · 18 OCT</span></p><span class="pixel-label">PIXEL LABEL / DISPLAY ONLY</span></article>
+            <article class="card"><span class="eyebrow">BUTTONS</span><div class="button-row"><button class="button primary">Primary action</button><button class="button secondary">Secondary</button><button class="button danger">Remove</button></div></article>
+            <article class="card"><span class="eyebrow">STATUS &amp; FEEDBACK</span><div class="button-row"><span class="status-chip complete">Completed</span><span class="status-chip pending">Pending</span><span class="status-chip failed">Failed</span></div><div class="notice warning"><strong>Missing evidence</strong><span>Unavailable does not mean zero.</span></div></article>
+            <article class="card"><span class="eyebrow">ATTRIBUTE INDICATORS</span><div class="attribute-row"><div><strong>Passing</strong><span>Evidence label and context</span></div><div class="bar"><span style="width:74%"></span></div><b>74</b></div><div class="attribute-row unavailable"><div><strong>Unavailable</strong><span>Not enough evidence</span></div><span class="dash">—</span></div></article>
+            <article class="card"><span class="eyebrow">EMPTY / LOADING</span><div class="empty-mini"><span class="empty-mark">＋</span><strong>No reports yet</strong><small>Your first report will appear here.</small><button class="button secondary" data-screen="report">Create report</button></div><div class="loading-line"><span></span></div></article>
+          </div>
+        </section>
+
+        <section class="screen" id="screen-states" data-title="States and error examples">
+          <div class="page-heading"><div><span class="eyebrow">SHARED STATES · VISUAL EXAMPLES</span><h1>Every state has a next step</h1><p>Empty, validation, failure, confirmation, and access-denied examples.</p></div></div>
+          <div class="state-grid">
+            <article class="card empty-state"><span class="empty-mark">＋</span><h2>No evaluations yet</h2><p>When an evaluation is completed, it will appear here. No sample score is implied.</p><button class="button primary" data-screen="report">Start a report</button></article>
+            <article class="card"><span class="eyebrow">EMPTY ROSTER</span><h2>No athletes connected</h2><p>Invite a player or request an existing athlete's approval.</p><button class="button secondary" data-screen="athlete-edit">Add or request athlete</button></article>
+            <article class="card"><div class="notice error"><strong>Report needs attention</strong><span>Add a match date and written report before continuing. Your entered details remain available.</span></div><label>Performance report<textarea aria-invalid="true" aria-describedby="demo-error" placeholder="Describe observed actions"></textarea><small class="error-text" id="demo-error">Please include enough context to identify the match.</small></label></article>
+            <article class="card"><div class="notice error"><strong>Evaluation could not be completed</strong><span>No result was saved. You can retry explicitly or return to history.</span></div><div class="button-row"><button class="button secondary" data-screen="history">Return to history</button><button class="button primary" data-screen="report">Simulate retry</button></div></article>
+            <article class="card"><span class="eyebrow">CONFIRMATION DIALOG · SIMULATED</span><h2>End this athlete relationship?</h2><p>The organization would lose future access. Historical records follow the approved retention policy.</p><button class="button danger" data-dialog-open>Preview confirmation dialog</button></article>
+            <article class="card"><span class="eyebrow">LOGOUT CONFIRMATION · INLINE MOCK</span><h2>Sign out of this workspace?</h2><p>In production, signing out ends the current session on this device.</p><div class="button-row"><button class="button secondary">Stay signed in</button><button class="button danger" data-toast="Sign out is simulated; no session exists.">Sign out</button></div></article>
+            <article class="card access-card"><span class="lock-mark">⊘</span><span class="eyebrow">ACCESS DENIED</span><h2>This page isn't available</h2><p>You may not have permission, or the resource may not exist.</p><button class="button secondary" data-screen="player-dashboard">Return to dashboard</button></article>
+          </div>
+        </section>
+      </main>
+      <footer class="footer"><span>FintaLab concept wireframe</span><span>Fictional data · Simulated interactions · No services connected</span></footer>
+    </div>
+  </div>
+  <dialog class="demo-dialog" id="demo-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+    <span class="eyebrow">CONFIRMATION · VISUAL ONLY</span>
+    <h2 id="dialog-title">End this athlete relationship?</h2>
+    <p id="dialog-description">This simulated action would remove future organization access. No relationship or historical record will change here.</p>
+    <div class="button-row"><button class="button secondary" data-dialog-close>Keep relationship</button><button class="button danger" data-dialog-confirm>Confirm preview</button></div>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
